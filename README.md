@@ -126,7 +126,13 @@ previous excercise. If you need to reconfigure your domain name, now is the time
 
 ## Assignment
 
-- Find out the DNS servers of the Hosted Zone created in the previous assignment.
+- run `ENVIRONMENT="development" ./rake_init.sh` to bootstrap the development environment 
+
+- run `ENVIRONMENT="acceptance" ./rake_init.sh` to bootstrap the acceptance environment
+
+- run `ENVIRONMENT="production" ./rake_init.sh` to bootstrap the production environment
+
+- Find out the DNS servers of the production Hosted Zone created
 
 - Provide these DNS servers to your tutor on Slack. He will make your Hosted Zone authoritive for your subdomain!
 
