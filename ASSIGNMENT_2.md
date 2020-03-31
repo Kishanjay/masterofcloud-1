@@ -3,10 +3,10 @@
 ```
    _____                   __                         _____  _________ .__                   .___
   /     \ _____    _______/  |_  ___________    _____/ ____\ \_   ___ \|  |   ____  __ __  __| _/
- /  \ /  \\__  \  /  ___/\   __\/ __ \_  __ \  /  _ \   __\  /    \  \/|  |  /  _ \|  |  \/ __ | 
-/    Y    \/ __ \_\___ \  |  | \  ___/|  | \/ (  <_> )  |    \     \___|  |_(  <_> )  |  / /_/ | 
-\____|__  (____  /____  > |__|  \___  >__|     \____/|__|     \______  /____/\____/|____/\____ | 
-        \/     \/     \/            \/                               \/                       \/ 
+ /  \ /  \\__  \  /  ___/\   __\/ __ \_  __ \  /  _ \   __\  /    \  \/|  |  /  _ \|  |  \/ __ |
+/    Y    \/ __ \_\___ \  |  | \  ___/|  | \/ (  <_> )  |    \     \___|  |_(  <_> )  |  / /_/ |
+\____|__  (____  /____  > |__|  \___  >__|     \____/|__|     \______  /____/\____/|____/\____ |
+        \/     \/     \/            \/                               \/                       \/
 ```
 
 ## Introduction
@@ -31,7 +31,7 @@ has all the required dependencies installed, and takes care of the compilation o
 scripts exist to make live easier for you, so you won't have to install these dependencies
 locally. The drawback of this approach is that some buffered output will only display when the
 specific command is finished (For example: when you run the apply script). You do not necessarily
-need to use Docker. If you want to set up a local dev environment check out https://shorturl.at/quB26
+need to use Docker. If you want to set up a local dev environment check out https://jasoncharnes.com/install-ruby/ _(set it to 2.5.0 instead of 2.4.x)_.
 
 So the `./rake_init.sh` script creates a Dependency Stack and `./rake_dependencies` fetches the
 result and stores it locally. This is a one-time step per environment so that all the other scripts
@@ -45,7 +45,7 @@ Here is a brief explanation of the other files in the root folder of the project
 .env                     # Main environment variable file
 .env.acceptance          # Environment variables for the `acceptance` environment
 .env.dependencies.rspec  # Mock Dependency Stack environment variables for the unit tests
-.env.dependencies.test   # Dependency Stack environment variables for the `test` environment 
+.env.dependencies.test   # Dependency Stack environment variables for the `test` environment
 .env.private             # Private environment variables, could contains secrets
 .env.rspec               # Mock environment variables for unit tests
 .env.test                # Environment variables for the `test` environment
@@ -128,7 +128,7 @@ previous excercise. If you need to reconfigure your domain name, now is the time
 
 - Inspect lib/stacks/ and lib/stacks/parent_stack/parent.rb and notice the missing stacks. Add them.
 
-- run `ENVIRONMENT="development" ./rake_init.sh` to bootstrap the development environment 
+- run `ENVIRONMENT="development" ./rake_init.sh` to bootstrap the development environment
 
 - run `ENVIRONMENT="acceptance" ./rake_init.sh` to bootstrap the acceptance environment
 
